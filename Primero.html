@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Consulta y Registro</title>
+</head>
+<body>
+
+    <header>
+        <h1>Panel de Gestión Académica</h1>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#consulta">Consulta</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+
+        <section id="consulta">
+            <h2>Consulta de estudiantes</h2>
+
+            <table border="1">
+                <caption>Listado de estudiantes registrados</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre completo</th>
+                        <th scope="col">Programa</th>
+                        <th scope="col">Semestre</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>María González</td>
+                        <td>Diseño Gráfico</td>
+                        <td>3</td>
+                        <td>Activo</td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Carlos Rodríguez</td>
+                        <td>Ingeniería de Sistemas</td>
+                        <td>5</td>
+                        <td>Activo</td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Laura Martínez</td>
+                        <td>Administración</td>
+                        <td>2</td>
+                        <td>Inactivo</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4">Total de estudiantes registrados</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Recuerda utilizar los símbolos &lt;HTML5&gt; para construir
+                documentos correctamente estructurados.
+            </p>
+        </section>
+
+        <section id="registro">
+            <h2>Formulario de registro</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Información del estudiante</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo:</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="codigo">Código estudiantil:</label>
+                        <input
+                            type="text"
+                            id="codigo"
+                            name="codigo"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="programa">Programa académico:</label>
+                        <select id="programa" name="programa" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="diseno">Diseño Gráfico</option>
+                            <option value="sistemas">Ingeniería de Sistemas</option>
+                            <option value="administracion">Administración</option>
+                            <option value="contabilidad">Contabilidad</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="semestre">Semestre:</label>
+                        <input
+                            type="number"
+                            id="semestre"
+                            name="semestre"
+                            min="1"
+                            max="12"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea
+                            id="comentarios"
+                            name="comentarios"
+                            rows="5"
+                            cols="40"
+                        ></textarea>
+                    </p>
+
+                    <button type="submit">Registrar estudiante</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+        <p>Autor: Tomás Restrepo</p>
+        <p>&copy; 2026 Panel de Gestión Académica. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
